@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 10%;
+    width: 336px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+}
+
+main{
+    padding: 10px 24px;
+    margin-bottom: 18px;
+}
+
+.colored{
+    height: 28px;
+    width: 100%;
+    background-color: #00c4cc;
+    border-radius: 9px 9px 0 0;
+    margin-bottom: 18px;
+}
+
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 14px;
+    color: #6a3be4;
+}
+
+.icon{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 6px 30px;
+    margin-bottom: 18px;
+    min-height: 40px;
+}
+
+.todo{
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 4px 10px;
+}
+
+.todo:hover{
+    background-color: #e4f8ff;
+    border-radius: 10px;
+    cursor: default;
+    transition: all 400ms;
+}
+
+.todo img:hover{
+    cursor: pointer;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.add-container{
+    display: flex;
+    justify-content: center;
+}
+
+.add{
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all .2s ease;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.add span{
+    color: transparent;
+}
+
+.add:before{
+    content: "+";
+    align-items: center;
+    line-height: 56px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: #6a3be4;
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease;
+    z-index: -99;
+    font-size: 34px;
+}
+
+.add svg{
+    position: relative;
+    top: 0;
+    margin-left: 20px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+}
+
+.add:hover:before {
+    width: 100%;
+    background: #6a3be4;
+    content: '';
+}
+.add:hover svg {
+    transform: translateX(0);
+}
+.add:active {
+    transform: scale(0.96);
+}
+.add:hover span{
+    color: white;
+}
+
+.input{
+    display: none;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #6a3be4;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+input{
+    font-family: 'Montserrat Alternates', sans-serif;
+    border: none;
+    width: 85%;
+    font-size: 14px;
+}
+.input button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    line-height: 30px;
+    background-color: #8463ee;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.input button:hover{
+    background-color: #6a3be4;
+}
+
+.remove{
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 56px;
+    height: 56px;
+    background-color: #fd4e4e;
+    border-radius: 50%;
+    align-items: center;
+    line-height: 56px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 400ms;
+    display: none;
+}
+.remove:hover{
+    background-color:  #ff0000;
+}
+
+.trash{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    border: 2px solid #fd4e4e;
+    border-radius: 10px;
+    width: 100px;
+    height: 120px;
+    background-image: url("trash.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media  screen and (max-width: 478px) {
+    .container{
+        max-width: 90%;
+    }
+}
